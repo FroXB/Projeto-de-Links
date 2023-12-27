@@ -134,7 +134,7 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
 
-  transition: background 0.5s;""
+  transition: background 0.5s;
 
   color: var(--text-color);
 }
