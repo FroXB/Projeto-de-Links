@@ -41,13 +41,13 @@ body {
   background: var(--bg-webkit-gradient);
   background: var(--bg-gradient);
 
-  transition: background 0.4s linear;
   background-attachment: fixed;
 }
 
 body * {
   /* font-family: "Inter", sans-serif; */
   font-family: "Poppins", sans-serif;
+  
 }
 
 #container {
