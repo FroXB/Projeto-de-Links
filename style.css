@@ -6,7 +6,14 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/dark.png);
+  --bg-color: #0f2027;
+  --bg-webkit-gradient: -webkit-linear-gradient(
+    to top,
+    #2c5364,
+    #203a43,
+    #0f2027
+  );
+  --bg-gradient: linear-gradient(to top, #2c5364, #203a43, #0f2027);
   --stroke-color: rgb(255, 255, 255, 1);
   --surface-color: rgb(255, 255, 255, 0.17);
   --text-color-icon: black;
@@ -15,7 +22,9 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/light.png);
+  --bg-color: #74ebd5;
+  --bg-webkit-gradient: -webkit-linear-gradient(to bottom, #acb6e5, #74ebd5);
+  --bg-gradient: linear-gradient(to bottom, #acb6e5, #74ebd5);
   --stroke-color: rgb(0, 0, 0, 1);
   --surface-color: rgb(0, 0, 0, 0.17);
   --text-color-icon: black;
@@ -28,7 +37,10 @@ body {
   background-position: top center;
   background-size: cover; */
 
-  background: var(--bg-url) no-repeat center/cover;
+  background: var(--bg-color);
+  background: var(--bg-webkit-gradient);
+  background: var(--bg-gradient);
+
   transition: background 0.4s linear;
   background-attachment: fixed;
 }
@@ -158,19 +170,20 @@ ul li a:hover {
   align-items: center;
   padding: 16px;
   border-radius: 50%;
-  background: rgb(255, 255, 255, 0.2);
-  color: #1a202c;
+  color: var(--text-color);
+  transition: background 0.5s;
+}
+
+#social-links a:hover {
+  background: var(--text-color);
+  background: var(--surface-color-hover);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
-
-/* #social-links a:hover {
-  background: var(--highlight-color);
-} */
 
 footer {
   padding: 16px 0;
   text-align: center;
   font-size: 14px;
-  color: white;
+  color: var(--stroke-color);
 }
